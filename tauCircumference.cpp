@@ -10,8 +10,8 @@
 
 float roundNumber(int decimalsNumber, float &number) {
     number = number * pow(10, decimalsNumber) + 0.5;
-    int tempNumber = (int)number;
-    number = (float)tempNumber / pow(10, decimalsNumber);
+    int tempNumber = static_cast<int>(number);
+    number = static_cast<float>(tempNumber) / pow(10, decimalsNumber);
 }
 
 int main() {
@@ -22,9 +22,9 @@ int main() {
     float fltNumber;
 
     // input
-    std::cout << "gib decimals number: ";
+    std::cout << "Input number of decimals: ";
     std::cin >> strDecimalsNumber;
-    std::cout << "gib number: ";
+    std::cout << "Input number: ";
     std::cin >> strNumber;
 
     // process
