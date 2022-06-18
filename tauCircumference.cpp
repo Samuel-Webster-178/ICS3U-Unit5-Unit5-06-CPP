@@ -32,12 +32,13 @@ int main() {
         intDecimalsNumber = std::stoi(strDecimalsNumber);
         fltNumber = std::stof(strNumber);
         roundNumber(intDecimalsNumber, fltNumber);
+        std::cout << "" << std::endl;
+        std::cout << "Rounded number is: " << fltNumber << std::endl;
     } catch (std::invalid_argument) {
+        std::cout << "" << std::endl;
         std::cout << "Invalid Input" << std::endl;
     }
 
     // output
-    std::cout << "" << std::endl;
-    std::cout << "Circumference is " << fltNumber << " mm" << std::endl;
     std::cout << "\nDone." << std::endl;
 }
